@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 48" shape-rendering="crispEdges">
+    <!-- Base Pebbles -->
+    <rect x="6" y="38" width="32" height="10" fill="#57534e"/>
+    <rect x="8" y="36" width="28" height="4" fill="#78716c"/>
+    <rect x="12" y="34" width="20" height="3" fill="#a8a29e"/>
+    
+    <!-- Small Seaweed Sprout -->
+    <rect x="8" y="18" width="4" height="18" fill="#16a34a"/>
+    <rect x="10" y="16" width="3" height="20" fill="#22c55e"/>
+    <rect x="11" y="14" width="2" height="8" fill="#4ade80"/>
+    
+    <!-- Soft Pastel Peach/Pink Anemone Fingers (No Harsh Red!) -->
+    <rect x="16" y="24" width="22" height="12" fill="#f472b6"/>
+    <rect x="18" y="22" width="18" height="12" fill="#fda4af"/>
+    <rect x="20" y="20" width="14" height="12" fill="#fecdd3"/>
+    
+    <!-- Delicate Polyps / Fingers -->
+    <rect x="18" y="14" width="4" height="8" fill="#fda4af"/>
+    <rect x="24" y="10" width="4" height="12" fill="#fecdd3"/>
+    <rect x="30" y="12" width="4" height="10" fill="#fda4af"/>
+    <rect x="35" y="16" width="3" height="8" fill="#f472b6"/>
+    
+    <!-- Soft Pastel Highlights -->
+    <rect x="19" y="13" width="2" height="3" fill="#fff1f2"/>
+    <rect x="25" y="9" width="2" height="4" fill="#ffffff"/>
+    <rect x="31" y="11" width="2" height="3" fill="#fff1f2"/>
+  </svg>

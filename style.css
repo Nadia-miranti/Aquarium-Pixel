@@ -1,0 +1,235 @@
+/* ========================================================
+   RESET & DASAR TAMPILAN PIXEL ART RETRO
+   ======================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #020712;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  color: #ffffff;
+}
+
+/* Kunci estetika pixel art: nonaktifkan antialiasing browser */
+canvas {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: block;
+}
+
+#app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ========================================================
+   CANVAS UTAMA AKUARIUM
+   ======================================================== */
+#aquarium-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: crosshair;
+}
+
+/* ========================================================
+   HUD & UI OVERLAY RETRO
+   ======================================================== */
+#aquarium-hud {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hud-left, .hud-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.hud-badge {
+  background: rgba(4, 16, 34, 0.90);
+  border: 3px solid #38bdf8;
+  box-shadow: 3px 3px 0px #0369a1;
+  padding: 8px 14px;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.badge-blue {
+  border-color: #38bdf8;
+  box-shadow: 3px 3px 0px #0369a1;
+  color: #7dd3fc;
+}
+
+.badge-pink {
+  border-color: #f472b6;
+  box-shadow: 3px 3px 0px #be185d;
+  color: #fbcfe8;
+}
+
+.badge-gold {
+  border-color: #fbbf24;
+  box-shadow: 3px 3px 0px #b45309;
+  color: #fef08a;
+}
+
+.hud-info {
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  color: #e0f2fe;
+  text-shadow: 2px 2px 0px #0284c7;
+  letter-spacing: 0.5px;
+}
+
+/* ========================================================
+   SPLASH SCREEN DENGAN RETRO ARCADE VIBES (5 Detik)
+   ======================================================== */
+.screen-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #071f38 0%, #030d1a 75%, #01060d 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  cursor: pointer;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.screen-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.pixel-badge-top {
+  font-size: 9px;
+  color: #38bdf8;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  background: rgba(2, 132, 199, 0.2);
+  border: 1px dashed #38bdf8;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.pixel-title {
+  font-size: 28px;
+  color: #38bdf8;
+  text-shadow: 4px 4px 0px #0284c7, 0 0 20px rgba(56, 189, 248, 0.7);
+  margin-bottom: 8px;
+  letter-spacing: 3px;
+  animation: titleGlow 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes titleGlow {
+  0% { text-shadow: 4px 4px 0px #0284c7, 0 0 12px rgba(56, 189, 248, 0.4); }
+  100% { text-shadow: 4px 4px 0px #0284c7, 0 0 24px rgba(244, 114, 182, 0.8); }
+}
+
+.pixel-subtitle {
+  font-size: 10px;
+  color: #f472b6;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 0px #be185d;
+}
+
+#splash-canvas {
+  margin: 6px 0 20px 0;
+  border: 4px solid #1e293b;
+  border-radius: 6px;
+  background: rgba(2, 11, 24, 0.85);
+  box-shadow: 0 0 26px rgba(56, 189, 248, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+/* Retro Loading Bar */
+.loading-bar-container {
+  width: 290px;
+  height: 22px;
+  background: #020912;
+  border: 3px solid #38bdf8;
+  box-shadow: 4px 4px 0px #0369a1;
+  padding: 2px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.loading-bar-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #0284c7 0%, #38bdf8 50%, #f472b6 100%);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+  transition: width 0.1s linear;
+}
+
+.pixel-text {
+  font-size: 10px;
+  color: #94a3b8;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.splash-prompt {
+  font-size: 9px;
+  color: #fef08a;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0px #b45309;
+  animation: pulsePrompt 1.2s infinite ease-in-out;
+}
+
+@keyframes pulsePrompt {
+  0%, 100% { opacity: 0.5; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+/* Efek Pencahayaan Air Akuarium Bersih (Vignette Halus Tanpa Garis Scanline) */
+#app-container::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(56, 189, 248, 0.04) 0%, rgba(2, 6, 23, 0.25) 100%);
+  z-index: 50;
+  pointer-events: none;
+}

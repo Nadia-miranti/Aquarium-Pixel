@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 20" shape-rendering="crispEdges">
+    <!-- Main Shell -->
+    <rect x="8" y="6" width="12" height="8" fill="#881337"/>
+    <rect x="9" y="7" width="10" height="6" fill="#e11d48"/>
+    <rect x="10" y="8" width="8" height="4" fill="#fb7185"/>
+    <rect x="11" y="9" width="6" height="2" fill="#fda4af"/>
+    
+    <!-- Left Claw -->
+    <rect x="3" y="2" width="5" height="4" fill="#881337"/>
+    <rect x="4" y="3" width="3" height="3" fill="#e11d48"/>
+    <rect x="2" y="1" width="2" height="3" fill="#fb7185"/>
+    <rect x="6" y="5" width="3" height="2" fill="#881337"/>
+    
+    <!-- Right Claw -->
+    <rect x="20" y="4" width="5" height="4" fill="#881337"/>
+    <rect x="21" y="5" width="3" height="3" fill="#e11d48"/>
+    <rect x="24" y="3" width="2" height="3" fill="#fb7185"/>
+    <rect x="19" y="7" width="3" height="2" fill="#881337"/>
+    
+    <!-- Cute Eyes on Stalks -->
+    <rect x="10" y="3" width="2" height="3" fill="#881337"/>
+    <rect x="10" y="2" width="2" height="2" fill="#0f172a"/>
+    <rect x="10" y="2" width="1" height="1" fill="#ffffff"/>
+    
+    <rect x="16" y="3" width="2" height="3" fill="#881337"/>
+    <rect x="16" y="2" width="2" height="2" fill="#0f172a"/>
+    <rect x="16" y="2" width="1" height="1" fill="#ffffff"/>
+    
+    <!-- Walking Legs (Left) -->
+    <rect x="6" y="14" width="3" height="3" fill="#9f1239"/>
+    <rect x="5" y="16" width="2" height="2" fill="#e11d48"/>
+    <rect x="8" y="13" width="2" height="3" fill="#9f1239"/>
+    
+    <!-- Walking Legs (Right) -->
+    <rect x="19" y="12" width="3" height="3" fill="#9f1239"/>
+    <rect x="21" y="14" width="2" height="2" fill="#e11d48"/>
+    <rect x="18" y="15" width="2" height="3" fill="#9f1239"/>
+  </svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" shape-rendering="crispEdges">
+    <!-- Center Body -->
+    <rect x="9" y="9" width="6" height="6" fill="#d97706"/>
+    <rect x="10" y="10" width="4" height="4" fill="#f59e0b"/>
+    <rect x="11" y="11" width="2" height="2" fill="#fbbf24"/>
+    
+    <!-- Top Arm -->
+    <rect x="10" y="3" width="4" height="6" fill="#d97706"/>
+    <rect x="11" y="2" width="2" height="6" fill="#f59e0b"/>
+    <rect x="11" y="4" width="2" height="2" fill="#fef08a"/>
+    
+    <!-- Bottom Left Arm -->
+    <rect x="5" y="14" width="5" height="4" fill="#d97706"/>
+    <rect x="3" y="17" width="4" height="4" fill="#f59e0b"/>
+    <rect x="4" y="16" width="2" height="2" fill="#fbbf24"/>
+    
+    <!-- Bottom Right Arm -->
+    <rect x="14" y="14" width="5" height="4" fill="#d97706"/>
+    <rect x="17" y="17" width="4" height="4" fill="#f59e0b"/>
+    <rect x="16" y="16" width="2" height="2" fill="#fbbf24"/>
+    
+    <!-- Upper Left Arm -->
+    <rect x="3" y="7" width="6" height="4" fill="#d97706"/>
+    <rect x="2" y="6" width="4" height="4" fill="#f59e0b"/>
+    <rect x="4" y="8" width="2" height="2" fill="#fbbf24"/>
+    
+    <!-- Upper Right Arm -->
+    <rect x="15" y="7" width="6" height="4" fill="#d97706"/>
+    <rect x="18" y="6" width="4" height="4" fill="#f59e0b"/>
+    <rect x="17" y="8" width="2" height="2" fill="#fbbf24"/>
+    
+    <!-- Glint Sparkle -->
+    <rect x="11" y="10" width="1" height="1" fill="#ffffff"/>
+  </svg>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aquarium Sprites Live Animation Preview</title>
+<style>
+body {
+  background: #04213d;
+  color: #e0f2fe;
+  font-family: monospace;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.card {
+  background: rgba(4, 16, 34, 0.85);
+  border: 2px solid #38bdf8;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  min-width: 180px;
+}
+.preview-box {
+  width: 140px;
+  height: 140px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.6);
+  border: 1px dashed #0284c7;
+  border-radius: 4px;
+}
+svg {
+  image-rendering: pixelated;
+  max-width: 120px;
+  max-height: 120px;
+}
+</style>
+</head>
+<body>
+<h1>🐟 Live Animated Pixel Sprites Preview</h1>
+<p>Memverifikasi 4-frame fluid swimming & pulsing animations langsung dari referensi</p>
+<div class="grid">
+  <div class="card">
+    <h3>Ikan Biru (4 Frames)</h3>
+    <div class="preview-box" id="box-blue"></div>
+    <span id="frame-blue">Frame: 0</span>
+  </div>
+  <div class="card">
+    <h3>Ikan Pink (4 Frames)</h3>
+    <div class="preview-box" id="box-pink"></div>
+    <span id="frame-pink">Frame: 0</span>
+  </div>
+  <div class="card">
+    <h3>Lumba-Lumba (4 Frames)</h3>
+    <div class="preview-box" id="box-dolphin"></div>
+    <span id="frame-dolphin">Frame: 0</span>
+  </div>
+  <div class="card">
+    <h3>Ubur-Ubur (4 Frames)</h3>
+    <div class="preview-box" id="box-jelly"></div>
+    <span id="frame-jelly">Frame: 0</span>
+  </div>
+  <div class="card">
+    <h3>Karang & Rumput Laut</h3>
+    <div class="preview-box" id="box-coral"></div>
+    <span>Static Centerpiece</span>
+  </div>
+</div>
+
+<script>
+fetch('generated_svg_sprites.json')
+  .then(res => res.json())
+  .then(sprites => {
+    let frame = 0;
+    document.getElementById('box-coral').innerHTML = sprites.coral_rock;
+
+    setInterval(() => {
+      frame = (frame + 1) % 4;
+      document.getElementById('box-blue').innerHTML = sprites.blue_fish[frame];
+      document.getElementById('frame-blue').textContent = 'Frame: ' + frame;
+
+      document.getElementById('box-pink').innerHTML = sprites.pink_fish[frame];
+      document.getElementById('frame-pink').textContent = 'Frame: ' + frame;
+
+      document.getElementById('box-dolphin').innerHTML = sprites.dolphin[frame];
+      document.getElementById('frame-dolphin').textContent = 'Frame: ' + frame;
+
+      document.getElementById('box-jelly').innerHTML = sprites.jellyfish[frame];
+      document.getElementById('frame-jelly').textContent = 'Frame: ' + frame;
+    }, 180);
+  });
+</script>
+</body>
+</html>

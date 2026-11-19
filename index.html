@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Pixel Art Aquarium</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Container Aplikasi Fullscreen -->
+  <div id="app-container">
+
+    <!-- 1. SPLASH SCREEN (Durasi ±5 Detik / Klik untuk Lewati) -->
+    <div id="splash-screen" class="screen-overlay">
+      <div class="splash-content">
+        <div class="pixel-badge-top">✦ DEEP SEA ARCADE ✦</div>
+        <h1 class="pixel-title">PIXEL AQUARIUM</h1>
+        <p class="pixel-subtitle">INTERACTIVE UNDERWATER ECOSYSTEM</p>
+        
+        <!-- Canvas Mini Animasi 2 Ikan Berputar dengan Jejak Cahaya -->
+        <canvas id="splash-canvas" width="280" height="280"></canvas>
+        
+        <!-- Retro Pixel Loading Bar -->
+        <div class="loading-bar-container">
+          <div id="loading-bar" class="loading-bar-fill"></div>
+        </div>
+        <p id="loading-text" class="pixel-text">Menyiapkan Ekosistem Laut... 0%</p>
+        <div class="splash-prompt">⚡ Klik layar atau tekan SPASI untuk menyelam ⚡</div>
+      </div>
+    </div>
+
+    <!-- 2. HUD / KONTROL INTERAKSI -->
+    <header id="aquarium-hud">
+      <div class="hud-left">
+        <span class="hud-badge badge-blue">🌊 PIXEL AQUARIUM</span>
+        <span class="hud-info">Klik kiri di air untuk menebar camilan laut 🍤</span>
+      </div>
+      <div class="hud-right">
+        <span id="food-counter" class="hud-badge badge-gold">🍤 Camilan: 0</span>
+        <span class="hud-badge badge-pink">Ikan Mengikuti Kursor 🎯</span>
+      </div>
+    </header>
+
+    <!-- 3. CANVAS UTAMA AKUARIUM -->
+    <canvas id="aquarium-canvas"></canvas>
+  </div>
+
+  <script src="sprites.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

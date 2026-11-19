@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 48" shape-rendering="crispEdges">
+    <!-- Rock Base -->
+    <rect x="6" y="36" width="32" height="12" fill="#57534e"/>
+    <rect x="10" y="32" width="24" height="6" fill="#78716c"/>
+    
+    <!-- Mint / Teal Sponge Dome -->
+    <rect x="12" y="16" width="18" height="18" fill="#0f766e"/>
+    <rect x="13" y="14" width="16" height="20" fill="#14b8a6"/>
+    <rect x="14" y="12" width="14" height="22" fill="#2dd4bf"/>
+    <rect x="16" y="10" width="10" height="24" fill="#5eead4"/>
+    
+    <!-- Sponge Vents -->
+    <rect x="17" y="9" width="3" height="3" fill="#0d9488"/>
+    <rect x="22" y="11" width="3" height="3" fill="#0d9488"/>
+    <rect x="19" y="17" width="3" height="3" fill="#0d9488"/>
+    <rect x="16" y="10" width="2" height="1" fill="#99f6e4"/>
+    
+    <!-- Cute Little Golden Starfish on the right -->
+    <rect x="28" y="34" width="8" height="8" fill="#d97706"/>
+    <rect x="29" y="33" width="6" height="8" fill="#f59e0b"/>
+    <rect x="30" y="32" width="4" height="10" fill="#fbbf24"/>
+    <rect x="31" y="35" width="2" height="2" fill="#fef08a"/>
+  </svg>
